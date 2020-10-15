@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ContextService {
-  proxy: boolean=false;
+  proxy: boolean=true;
   baseUrl: string;
   authToken:string;
   selectedPartyId:string;
