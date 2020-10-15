@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'userCredential';
+  value:string='';
+  onClick(){
+    alert('Value: '+this.value);
+  }
+
+  onBlur(event:any){
+    this.value = event.target.value;
+  }
 }
