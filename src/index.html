@@ -5,14 +5,17 @@
   <title>UserCredential</title>  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+ 
 </head>
 <body>
-  <input type="hidden" id="__ClientContext" name="__ClientContext"
+   <!-- <input type="hidden" id="__ClientContext" name="__ClientContext"
     value='{"baseUrl":"/iMIS0/","isAnonymous":false,"loggedInPartyId":"24553","selectedPartyId":"24553","websiteRoot":"https://www.imisconsulting.com.au/imis0/LPBWA/","virtualDir":"/iMIS0/"}' />
   <input type="hidden" name="__RequestVerificationToken" id="__RequestVerificationToken"
-    value="YLcR4CWEQNAugbUs_FOaGcrUeYo0hf_OtdSkKmld-Ld7naowjLVxepMrXyl8owxSZhQcs9SuJlueVtrUuotcKvVjTWF-p_pVHxCtr3l0ou6jN3wIs0rt8hJox57UpqYPHS1TNKlhux8iB5SodJm0ywMYKNznky33Bc0G21ZYBZMRRAW_z7EUsNuEkszJ9EP52vyrIDfHoJ-dkq-YLFs3roQdpnRVM1aNcfvcOaeJUUqE089h1cbKKpfx84bYnMiJP4k0FqPOVcxb1WrwaFVdwltX3EXckV7Zm35aGySvqwo74fIA38d5lEr7xxxJUfzyRbCy0YCIUUdpFdZZeIs9DPriUmAzeGONHZsAKoYYUAy6OtLfCCLZOTiq_zbb6AuO9P-RC3bRIcsvJw6dbqypvhd_6ZGL5koRjpgZD4DcKW6irvgzn0ZcWvxTihn01wyB51L2G__FdTBqow5lzKBn0hLETm7_iJ_s923yg2EgMeee71H6iUbkc6XKCsKNgroH-e2UFJNKZPB9d-c3ojJWE6LTMIrG2sCaFPIA8VceRDxD9MiHMhXdnYSNeHEt-9bo5TviIxUF_Ny-fLrg0MVyXqI-aaNnk1vIgwYi8NaZ-AyoaZOLBy44peBITmnaLz9kmX4LqomH8e0LsxMEih_AGyh_aDxTQY7H526t3SCDZQEkKqWBPEy7UimUc5CFjKcvUs7TbtJ4JcaAgEfi8D25QpjndeKJ9v3RtDXwzoN1QHVGPjTMYr9okMmfJlcRFKAmExdWHW6Ur6vq_vDDwOn6SD_6ZzHg1f24uydsim_HX2bxJfURISo9YYiEb0lJswj8kladlVTXOkjd3c3xwpyyAvCiXT5Hng9_hCLVTJBKrzYbwrs_Cfd5Iycjh-DyOMVDAroQOHIE53f7SyAatWz_2s7GI1eA-Nt5Yyg4_1d0lapfx019JoCFdId8WBFC0Su5U4Tq2UjFcS-uEq8YknFIpKepj5MFJRPJFdfvuwNXj79RTuuT03xV13YECuRoEhGOHR1ICuEmaP3LUwrbpphYlBHkVvVSYoaj693aeoBF1fr8tua_NrVtVLDsB-VZzvGwwk8x7zhWcprRp3_hKA3NuJjzJnyyjIe8fyQmcaPd57iFVxXP871fy2_SbytpPbLR"> 
-    <!-- <input type="hidden" id="x-contentItemKey" value="[x-contentItemKey]">
-  <input type="hidden" id="x-contentKey" value="[x-contentKey]"> -->
+    value="YLcR4CWEQNAugbUs_FOaGcrUeYo0hf_OtdSkKmld-Ld7naowjLVxepMrXyl8owxSZhQcs9SuJlueVtrUuotcKvVjTWF-p_pVHxCtr3l0ou6jN3wIs0rt8hJox57UpqYPHS1TNKlhux8iB5SodJm0ywMYKNznky33Bc0G21ZYBZMRRAW_z7EUsNuEkszJ9EP52vyrIDfHoJ-dkq-YLFs3roQdpnRVM1aNcfvcOaeJUUqE089h1cbKKpfx84bYnMiJP4k0FqPOVcxb1WrwaFVdwltX3EXckV7Zm35aGySvqwo74fIA38d5lEr7xxxJUfzyRbCy0YCIUUdpFdZZeIs9DPriUmAzeGONHZsAKoYYUAy6OtLfCCLZOTiq_zbb6AuO9P-RC3bRIcsvJw6dbqypvhd_6ZGL5koRjpgZD4DcKW6irvgzn0ZcWvxTihn01wyB51L2G__FdTBqow5lzKBn0hLETm7_iJ_s923yg2EgMeee71H6iUbkc6XKCsKNgroH-e2UFJNKZPB9d-c3ojJWE6LTMIrG2sCaFPIA8VceRDxD9MiHMhXdnYSNeHEt-9bo5TviIxUF_Ny-fLrg0MVyXqI-aaNnk1vIgwYi8NaZ-AyoaZOLBy44peBITmnaLz9kmX4LqomH8e0LsxMEih_AGyh_aDxTQY7H526t3SCDZQEkKqWBPEy7UimUc5CFjKcvUs7TbtJ4JcaAgEfi8D25QpjndeKJ9v3RtDXwzoN1QHVGPjTMYr9okMmfJlcRFKAmExdWHW6Ur6vq_vDDwOn6SD_6ZzHg1f24uydsim_HX2bxJfURISo9YYiEb0lJswj8kladlVTXOkjd3c3xwpyyAvCiXT5Hng9_hCLVTJBKrzYbwrs_Cfd5Iycjh-DyOMVDAroQOHIE53f7SyAatWz_2s7GI1eA-Nt5Yyg4_1d0lapfx019JoCFdId8WBFC0Su5U4Tq2UjFcS-uEq8YknFIpKepj5MFJRPJFdfvuwNXj79RTuuT03xV13YECuRoEhGOHR1ICuEmaP3LUwrbpphYlBHkVvVSYoaj693aeoBF1fr8tua_NrVtVLDsB-VZzvGwwk8x7zhWcprRp3_hKA3NuJjzJnyyjIe8fyQmcaPd57iFVxXP871fy2_SbytpPbLR">  -->
+
   <app-root></app-root>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

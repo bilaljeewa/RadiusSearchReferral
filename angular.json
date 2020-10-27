@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "userCredential": {
@@ -63,7 +63,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "userCredential:build",
-            "proxyConfig":"proxy.conf.json"
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "userCredential"
+    }
+  },
+  "defaultProject": "userCredential",
+  "cli": {
+    "analytics": "5f423e99-ba01-46c6-9035-2c678a04ba26"
+  }
 }

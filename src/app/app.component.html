@@ -1,17 +1,65 @@
-<div class="PanelField Left">
-  <label>LicensedTo:</label>
-  <div class="PanelFieldValue">
-    <label id='licensedTo'>{{licensedToText}}</label>
+<div class="custom-form-wrap pseudoSection">
+  <div class="form-ininer p-3 p-md-4 ">
+    
+      <form [formGroup]="userForm">
+
+        <!-- <progress  class="loading">Loading...</progress> -->
+        
+          <div class="row form-row">
+            
+              <div class="col-lg-4">
+                  <div class="form-group">
+                      <label for="">Name</label>
+                      <input class="form-control" [ngStyle]="{'border-color': userForm.get('userName').errors &&  userForm.get('userName').touched ? '#ff0000': '' }" formControlName="userName" type="text">
+                      <div class="error" *ngIf="userForm.get('userName').errors && userForm.get('userName').touched">
+                        <p>Please enter Name</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <div class="form-group">
+                      <label for="">Email</label>
+                      <input class="form-control" [ngStyle]="{'border-color': userForm.get('email').errors &&  userForm.get('email').touched ? '#ff0000': '' }" formControlName="email" type="text">
+                      <div class="error" *ngIf="userForm.get('email').errors && userForm.get('email').touched">
+                        <p *ngIf="userForm.get('email').errors && userForm.get('email').errors.required">Please enter Email</p>
+                        <p *ngIf="userForm.get('email').errors && userForm.get('email').errors.pattern">Enter Correct Email</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input class="form-control" [ngStyle]="{'border-color': userForm.get('phone').errors &&  userForm.get('phone').touched ? '#ff0000': '' }" formControlName="phone" type="text">
+                    
+                    <div class="error" *ngIf="userForm.get('phone').errors && userForm.get('phone').touched">
+                      <p *ngIf="userForm.get('phone').errors && userForm.get('phone').errors.required">Please enter Phone</p>
+                      <p *ngIf="userForm.get('phone').errors && userForm.get('phone').errors.minlength && !userForm.get('phone').errors.pattern">Enter minmum 10 number</p>
+                      <p *ngIf="userForm.get('phone').errors && userForm.get('phone').errors.maxlength && !userForm.get('phone').errors.pattern">Enter maximum 10 number</p>
+                      <p *ngIf="userForm.get('phone').errors && userForm.get('phone').errors.pattern">Enter Only Number</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="">Message</label>
+              <textarea class="form-control" [ngStyle]="{'border-color': userForm.get('message').errors &&  userForm.get('message').touched ? '#ff0000': '' }" formControlName="message" name="" id="" cols="30" rows="10"></textarea>
+              <div class="error" *ngIf="userForm.get('message').errors && userForm.get('message').touched">
+                <p>Please enter Message</p>
+              </div>
+          </div>
+          <div class="form-button">
+              <input type="submit" (click)="onClick()" class="buttons" value="Contact Business" name="signin">
+          </div>
+
+          <div *ngIf="showAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="close" (click)="closeAlert()" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+      </form>
   </div>
 </div>
-<div class="PanelField Left">
-  <label>Email: </label>
-  <div class="PanelFieldValue">
-    <input #email (blur)="onBlur($event)"/>
-  </div>
-</div>
-<div class="PanelField Left">
-  <div class="PanelFieldValue">
-    <button (click)="onClick()">Click!</button>
-   </div>
-</div>
+
+
+

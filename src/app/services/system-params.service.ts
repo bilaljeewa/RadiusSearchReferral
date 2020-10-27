@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ContextService } from './context.service';
@@ -26,5 +26,16 @@ export class SystemParamsService extends ServiceBase {
           return value;
         }
         )).pipe(catchError(this.handleError));
+  }
+
+  public submitUserData(param:string):Observable<string>{
+    console.log(param)
+    let apiUrl = 'https://b4sy4bzrv8.execute-api.us-east-2.amazonaws.com/radiusSerachReferral/searchAPI';
+    let rawData = {
+      param
+    };
+    const headers = new HttpHeaders().set('Content-Type', 'application/json');
+    return this.httpClient.post(apiUrl, param, { headers })
+      .pipe(map((res) => res['Items'])).pipe(catchError(this.handleError));
   }
 }

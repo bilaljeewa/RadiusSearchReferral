@@ -1,0 +1,78 @@
+.custom-form-wrap {}
+
+.custom-form-wrap .form-ininer {
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0,.10);
+}
+
+.custom-form-wrap .form-ininer label {
+    color: #2b91af;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.custom-form-wrap .form-button {}
+
+.custom-form-wrap .form-button .buttons {
+    background: #2b91af;
+    color: #fff;
+    border: none;
+    padding: 11px 29px;
+    font-size: 15px;
+    border-radius: 50px;
+    font-weight: 500;
+    outline: none!important;
+}
+.error p{
+    color: #ff0000;
+}
+.modal-body{
+    text-align: center;
+}
+.alert{
+    margin-top: 1rem;
+}
+
+.custom-form-wrap .form-ininer {
+    background: #fff;
+}
+.custom-form-wrap .form-ininer .form-group {
+    margin-bottom: 1rem;
+}
+.custom-form-wrap .form-ininer .form-group label {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    margin-left: 0;
+}
+.custom-form-wrap .form-ininer .form-group .form-control {
+    width: 100% !important;
+}
+.form-ininer.p-3.p-md-4 {}
+
+.custom-form-wrap .alert.fade.show {
+    opacity: 1;
+}
+.custom-form-wrap .alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+.custom-form-wrap .alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.custom-form-wrap .alert .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .75rem 1.25rem;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
