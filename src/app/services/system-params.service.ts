@@ -30,7 +30,9 @@ export class SystemParamsService extends ServiceBase {
 
   public submitUserData(param:string):Observable<string>{
     console.log(param)
-    let apiUrl = 'https://b4sy4bzrv8.execute-api.us-east-2.amazonaws.com/radiusSerachReferral/searchAPI';
+    let apiUrl = 'https://3xykhh5d4e.execute-api.us-east-2.amazonaws.com/radius2/getdata';
+    //let apiUrl = 'https://3xykhh5d4e.execute-api.us-east-2.amazonaws.com/RadiusSearchReferral/getdata';
+    //let apiUrl = 'https://yb9ex8gr0j.execute-api.us-east-2.amazonaws.com/RadiusSearchReferral/searchAPI'
     let rawData = {
       param
     };

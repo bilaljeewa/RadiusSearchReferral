@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   message: any='Please wait';
   showAlert: boolean;
   imisId:any;
+  successWarning: boolean;
 
   constructor(private systemParamsService : SystemParamsService,public fb: FormBuilder ){
 
@@ -52,17 +53,19 @@ export class AppComponent implements OnInit {
     this.userForm.get('imisId').setValue(this.imisId)
     if(this.userForm.valid){
       let data = this.userForm.getRawValue()
+      this.successWarning= false
       this.message= 'Please wait'
+      
       this.showAlert=true
       this.systemParamsService.submitUserData(data).subscribe(resp=>{
         console.log(resp)
         if(resp['status'] == 'true'){
           this.message = resp['message']
+          this.successWarning= true
           this.userForm.get('userName').reset()
           this.userForm.get('phone').reset()
           this.userForm.get('email').reset()
           this.userForm.get('message').reset()
-         
         }else{
           this.message = 'Something went wrong'
         }
